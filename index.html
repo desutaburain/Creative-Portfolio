@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Desta 2026</title>
+
+    <!-- Favicon Logo Browser -->
+    <link rel="icon" type="image/png" href="./logo.png">
+
+    <!-- Google Fonts: Syne (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Texture -->
+    <div class="bg-mesh"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="brand-logo">D<span>est.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button id="soundToggle" class="sound-btn custom-hover" aria-label="Toggle Sound">
+                    <span class="sound-icon">🎵</span> <span class="sound-text">Sound OFF</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Audio Tag (Ditaruh bersih di luar navbar) -->
+    <audio id="bgMusic" loop preload="auto">
+        <!-- TIPS: Ubah nama file lagu kamu di folder menjadi All-of-Me.mp3 (tanpa spasi) -->
+        <source src="./laguw.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <div class="availability-badge">
+                <span class="dot"></span> Available for Freelance & Projects
+            </div>
+            <h1 class="hero-title">Shaping <span class="gradient-text">Visuals</span><br>Into Reality.</h1>
+            <p class="hero-subtitle">Crafting immersive digital experiences through 3D animation, motion graphics, and
+                bold brand identities.</p>
+            <a href="#work" class="cta-btn custom-hover">
+                Explore Works
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio">
+        <div class="section-header reveal">
+            <h2>Selected Works</h2>
+            <div class="filter-nav">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="GD">Graphic Design</button>
+                <button class="filter-btn" data-filter="VM">Video & Motion</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Card 1 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Graduate Poetry.   "
+                data-desc="An elegant graduation portrait designed with a dreamy editorial aesthetic. Warm golden tones, cinematic lighting, and refined typography create a sophisticated yet personal visual that captures the celebration of a meaningful milestone."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1ST0MPdqem7m7Z8ZasixNZFuyIh66qNJ3">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1ST0MPdqem7m7Z8ZasixNZFuyIh66qNJ3" alt="Amir">
+                    <div class="card-overlay">
+                        <h3>A Graduate Poetry.</h3>
+                        <p>Graphic Design</p>
+                        <div class="tags"><span>Illustrator</span><span>Modern</span><span>Dreamy</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="Image Manipulation"
+                data-desc="A young car enthusiast documenting his journey through a passion for automotive culture, capturing every moment, road, and experience along the way. Driven by curiosity and a love for adventure, he turns his journey into a personal story one that leads toward the dream of reaching the Maldives."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1Q7A2x28ZG2bvVQQfx6r2wQ8e7j02HdPv">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1Q7A2x28ZG2bvVQQfx6r2wQ8e7j02HdPv"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>Image Manipulation</h3>
+                        <p>Fun Project!</p>
+                        <div class="tags"><span>Photoshop</span><span>Concept Art</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="Typography In Action"
+                data-desc="A bold typographic poster that combines vibrant colors, playful forms, and expressive composition to deliver an empowering message. The contrast between the bright typography and soft floral imagery creates a youthful yet impactful visual, emphasizing the importance of embracing failure as part of growth."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1IoGo9yB6byK8AizibEigco6PVqhhFGSs">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1IoGo9yB6byK8AizibEigco6PVqhhFGSs"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>Typography In Action</h3>
+                        <p>A Motivation</p>
+                        <div class="tags"><span>Photoshop</span><span>Typography</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="Healthy Cat"
+                data-desc="A vintage-inspired health poster designed to promote awareness of proper cat care. The retro visual style, warm tones, and classic typography create a nostalgic yet approachable aesthetic, while the informative elements keep the message clear and engaging."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1mrwNnuJ98P3ChR7r9telAz0ZpoFeM3v8">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1mrwNnuJ98P3ChR7r9telAz0ZpoFeM3v8"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>Healthy Cat</h3>
+                        <p>Poster For Home Pat</p>
+                        <div class="tags"><span>Ilustration</span><span>Poster</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="portfolio-card reveal custom-hover" data-category="GD" data-title="A Friend Never End"
+                data-desc="A heartfelt and nostalgic poster for the Negla Sari 'ALLIES' group, dated August 2024 in Bogor. The design features the powerful, bold pink message 'DON'T FORGET US,' accompanied by a series of framed personal portraits and a blurred group shot, emphasizing themes of enduring friendship, gratitude, and connection despite distance."
+                data-type="image" data-src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y">
+                <div class="card-inner">
+                    <img src="https://lh3.googleusercontent.com/d/1KM8egWIFgowHmV8BUNGtlY2clVbhfc3Y"
+                        alt="Cyberpunk Pinocchio">
+                    <div class="card-overlay">
+                        <h3>A Friend Never End</h3>
+                        <p>Togetherness</p>
+                        <div class="tags"><span>Photoshop</span><span>Poster</span><span>Friend</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card video start disini -->
+            <div class="portfolio-card reveal custom-hover" data-category="VM" data-title="Showreel 2026"
+                data-desc="A dynamic compilation of my best motion graphics and 3D animation work." data-type="video"
+                data-src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/viedo1-jarum.mp4">
+                <div class="card-inner">
+                    <video autoplay muted loop playsinline>
+                        <source
+                            src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/viedo1-jarum.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="card-overlay">
+                        <h3>Showreel 2026</h3>
+                        <p>Motion Graphics</p>
+                        <div class="tags"><span>After Effects</span><span>3D</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card reveal custom-hover" data-category="VM" data-title="Showreel 2026"
+                data-desc="A dynamic compilation of my best motion graphics and 3D animation work." data-type="video"
+                data-src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/video2-kemenkum.mp4">
+                <div class="card-inner">
+                    <video autoplay muted loop playsinline>
+                        <source
+                            src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/video2-kemenkum.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="card-overlay">
+                        <h3>Showreel 2026</h3>
+                        <p>Motion Graphics</p>
+                        <div class="tags"><span>After Effects</span><span>3D</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card reveal custom-hover" data-category="VM" data-title="Showreel 2026"
+                data-desc="A dynamic compilation of my best motion graphics and 3D animation work." data-type="video"
+                data-src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/viedo1-jarum.mp4">
+                <div class="card-inner">
+                    <video autoplay muted loop playsinline>
+                        <source
+                            src="https://github.com/akubukanwanita121-crypto/Web-Porto-Desta-2026/releases/download/videos/viedo1-jarum.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="card-overlay">
+                        <h3>Showreel 2026</h3>
+                        <p>Motion Graphics</p>
+                        <div class="tags"><span>After Effects</span><span>3D</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Lightbox -->
+    <div class="modal" id="projectModal">
+        <div class="modal-bg"></div>
+        <button class="close-modal custom-hover">&times;</button>
+        <div class="modal-content">
+            <div class="modal-media" id="modalMedia"></div>
+            <div class="modal-info">
+                <h2 id="modalTitle">Project Title</h2>
+                <p id="modalDesc">Project description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About & Skills Section -->
+    <section id="about" class="about">
+        <div class="about-container reveal">
+
+            <!-- Left Column: Visual Profile -->
+            <div class="about-visual">
+                <div class="about-image-wrapper custom-hover">
+                    <img src="./desta.jpg" alt="Desta - Creative Designer" class="about-profile-img"
+                        style="fit-content;">
+                    <div class="image-glow"></div>
+                    <div class="image-border-frame"></div>
+
+                    <!-- Floating Luxury Badges -->
+                    <div class="floating-badge badge-top">
+                        <span class="badge-dot"></span> Motion & 3D Specialist
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        Based in Indonesia 🇮🇩
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text & Skills -->
+            <div class="about-text">
+                <span class="section-tagline">NARRATIVE & VISUAL DIRECTION</span>
+                <h2>Bridging artistic vision with technical precision.</h2>
+
+                <p class="about-description">
+                    I craft immersive visual identities, motion experiences, and 3D worlds. Focusing on character-driven
+                    narrative and refined aesthetics, I turn complex concepts into high-impact digital art.
+                </p>
+
+                <!-- Skill Categories -->
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h4>Core Expertise</h4>
+                        <div class="skills-grid">
+                            <span class="skill-badge custom-hover">Motion Design</span>
+                            <span class="skill-badge custom-hover">3D Modeling & Animation</span>
+                            <span class="skill-badge custom-hover">Brand Strategy</span>
+                            <span class="skill-badge custom-hover">Visual Storytelling</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Software & Workflow</h4>
+                        <div class="skills-grid">
+                            <span class="skill-badge tech custom-hover">Blender</span>
+                            <span class="skill-badge tech custom-hover">After Effects</span>
+                            <span class="skill-badge tech custom-hover">Premiere Pro</span>
+                            <span class="skill-badge tech custom-hover">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="about-cta">
+                    <a href="#contact" class="cta-btn secondary custom-hover">
+                        <span>Let's Talk</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="./cv.pdf" target="_blank" class="cv-link custom-hover">Download CV ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content reveal">
+            <h2 class="collab-text">Let's create something<br><span class="gradient-text">extraordinary.</span></h2>
+
+            <div class="social-links">
+                <a href="#" class="custom-hover">Instagram</a>
+                <a href="#" class="custom-hover">Behance</a>
+                <a href="#" class="custom-hover">LinkedIn</a>
+                <a href="#" class="custom-hover">GitHub</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Creative Portfolio.</p>
+                <div class="live-clock" id="liveClock">00:00:00</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
