@@ -297,25 +297,6 @@ section {
     perspective: 1000px;
 }
 
-/* Responsif untuk Tablet (Layar di bawah 1024px) -> Jadi 2 Kolom */
-@media (max-width: 1024px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Responsif untuk HP (Layar di bawah 600px) -> Jadi 1 Kolom ke bawah */
-@media (max-width: 600px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* Sesuaikan tinggi kartu di HP agar tidak terlalu panjang/pendek */
-    .card-inner {
-        height: 350px;
-    }
-}
 
 .portfolio-card {
     position: relative;
@@ -742,7 +723,26 @@ footer {
 
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media @media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        max-height: 85vh;
+        /* Batasi tinggi modal */
+        overflow-y: auto;
+        /* Supaya bisa di-scroll kalau kepanjangan */
+    }
+
+    .close-modal {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+}
+
+
+(max-width: 900px) {
     .hero-title {
         font-size: 3.5rem;
     }
