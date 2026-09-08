@@ -291,10 +291,30 @@ section {
 
 .portfolio-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
+    /* Default: 4 kolom di komputer/laptop */
     gap: 20px;
     perspective: 1000px;
+}
+
+/* Responsif untuk Tablet (Layar di bawah 1024px) -> Jadi 2 Kolom */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsif untuk HP (Layar di bawah 600px) -> Jadi 1 Kolom ke bawah */
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Sesuaikan tinggi kartu di HP agar tidak terlalu panjang/pendek */
+    .card-inner {
+        height: 350px;
+    }
 }
 
 .portfolio-card {
