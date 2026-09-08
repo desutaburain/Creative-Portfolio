@@ -291,10 +291,10 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     perspective: 1000px;
-    /* For 3D effect */
 }
 
 .portfolio-card {
