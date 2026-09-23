@@ -165,7 +165,13 @@ section {
     align-items: center;
 }
 
-/* Sound Toggle Button Style */
+/* Styling Sound Toggle / Nav Controls */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
 .sound-btn {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -178,6 +184,7 @@ section {
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Menjaga teks tidak terlipat ke bawah */
 }
 
 .sound-btn:hover {
@@ -189,6 +196,7 @@ section {
     color: var(--accent-solid);
     box-shadow: 0 0 12px var(--accent-glow);
 }
+
 
 /* Hero Section */
 .hero {
@@ -999,14 +1007,118 @@ footer {
     }
 
     /* ==========================================
-   WORK EXPERIENCE SECTION
+/* ==========================================
+   WORK EXPERIENCE SECTION (Compact Style)
    ========================================== */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di Desktop */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.exp-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 16px; /* Padding di sekeliling kartu */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antara foto dan teks */
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-solid);
+    box-shadow: 0 10px 30px rgba(102, 252, 241, 0.08);
+}
+
+/* Membatasi Ukuran Wrapper Foto */
+.exp-image-wrapper {
+    width: 130px;        /* Lebar foto dibuat tetap */
+    height: 130px;       /* Tinggi foto dibuat tetap */
+    flex-shrink: 0;      /* Supaya foto tidak gepeng */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.exp-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.exp-card:hover .exp-image-wrapper img {
+    transform: scale(1.08);
+}
+
+.exp-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp-date {
+    font-size: 0.75rem;
+    color: var(--accent-solid);
+    font-family: var(--font-heading);
+    margin-bottom: 4px;
+}
+
+.exp-details h3 {
+    font-size: 1.15rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.exp-company {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.exp-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.exp-details .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.exp-details .tags span {
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    color: var(--text-primary);
+}
+
+/* RESPONSIVE DESIGN FOR EXPERIENCE SECTION */
+@media (max-width: 768px) {
     .experience-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 Kolom di Desktop */
-        gap: 30px;
-        margin-top: 40px;
+        grid-template-columns: 1fr; /* 1 Kolom di HP */
+    }
+
+    .exp-card {
+        flex-direction: column; /* Ubah tumpukan jadi vertikal di HP */
+        align-items: flex-start;
+    }
+
+    .exp-image-wrapper {
+        width: 100%;       /* Foto melebar penuh di HP agar rapi */
+        height: 180px;
+    }
+}
     }
 
     .exp-card {
@@ -1117,4 +1229,3 @@ footer {
 
 
 
-}
